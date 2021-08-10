@@ -53,6 +53,13 @@ textarea:focus {
   border: none;
 }
 
+:not(svg),
+:not(foreignObject) > svg {
+  transform-origin-x: 0px;
+  transform-origin-y: 0px;
+  transform-box: view-box;
+}
+
 .header-list {
   cursor: pointer;
   margin-left: auto;
@@ -733,37 +740,27 @@ footer {
   padding: 6px;
   top: 8px;
   right: 8px;
-  border-radius: 50%;
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: transparent;
-  border-color: inset;
+  background-color: unset;
+  /* border-color: inset; */
   cursor: pointer;
+}
+
+.close-btn:hover .close-button-icon,
+.close-btn:focus .close-button-icon {
+  fill: #2196f3;
 }
 
 .close-button-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button-icon:hover,
-.close-button-icon:focus {
-  background: #2196f3;
-}
-
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.form-field {
-}
-
-.form-field input {
-  margin: 0%;
-  padding: 5px 8px;
 }
 
 .modal-text {
@@ -779,17 +776,29 @@ footer {
 .modal-form-area {
   flex-direction: column;
   margin-bottom: 10px;
-
-  margin-bottom: 4px;
+  display: block;
 }
 
 .modal-form-input {
   margin: 0;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -798,12 +807,18 @@ footer {
   border: 1px solid #2196f3;
 }
 
+.modal-form-input:hover + .modal-form-icon,
+.modal-form-input:focus + .modal-form-icon {
+  fill: #2196f3;
+}
+
 .modal-form-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
+  margin-bottom: 4px;
 }
 
 .modal-form-wrap {
@@ -835,14 +850,13 @@ footer {
   resize: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-
-  /* box-sizing: border-box; */
 }
 
 .modal-comment:hover,
 .modal-comment:focus {
   border: 1px solid #2196f3;
 }
+
 /* CHECKBOX */
 
 .checkbox {
