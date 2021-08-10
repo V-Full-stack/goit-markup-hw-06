@@ -759,8 +759,6 @@ footer {
 }
 
 .form-field {
-  flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .form-field input {
@@ -779,6 +777,9 @@ footer {
 }
 
 .modal-form-area {
+  flex-direction: column;
+  margin-bottom: 10px;
+
   margin-bottom: 4px;
 }
 
@@ -807,6 +808,8 @@ footer {
 
 .modal-form-wrap {
   position: relative;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .form-field-comment textarea::placeholder {

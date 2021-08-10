@@ -473,9 +473,9 @@
 
 <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
     <form class="modal-form" >
-
-        <div class="form-field">
             <label class="modal-form-area" for="name"> 
+       
+
                 <span class="modal-form-label">Имя</span>
                 <span class="modal-form-wrap">
                     <input class="modal-form-input" type="text" name="name" id="name" required />
@@ -485,20 +485,30 @@
                     </svg>
                 </span>
             </label>
-        </div>
+       
 
         <div class="form-field">
-            <label class="modal-form-area" for="tel"> </label>
-                    <span class="modal-form-label">Телефон</span>
+            <label class="modal-form-area" for="tel">
+                <span class="modal-form-label">Телефон</span>
+                <span class="modal-form-wrap"> 
                     <input class="modal-form-input" type="text" name="tel" id="tel" required autofocus/>
-            
+                    <svg width="18" height="18" class="modal-form-icon">
+                        <use href="./images/icons.svg/sprite.svg#icon-phone-modal"></use>
+                    </svg>
+                </span> 
+            </label>
         </div>
 
         <div class="form-field"> 
-            <label class="modal-form-area" for="email"> </label>
+            <label class="modal-form-area" for="email"> 
                 <span class="modal-form-label">Почта</span>
-                <input class="modal-form-input" type="email" name="mail" id="mail" required />
-   
+                <span class="modal-form-wrap">
+                    <input class="modal-form-input" type="email" name="mail" id="email" required />
+                    <svg width="18" height="18" class="modal-form-icon">
+                        <use href="./images/icons.svg/sprite.svg#icon-email-modal"></use>
+                    </svg>
+                </span>
+            </label>
         </div>
     
 
