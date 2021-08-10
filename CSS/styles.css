@@ -747,10 +747,25 @@ footer {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-button-icon:hover,
+.close-button-icon:focus {
+  background: #2196f3;
+}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.form-field {
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field input {
+  margin: 0%;
+  padding: 5px 8px;
 }
 
 .modal-text {
@@ -764,17 +779,22 @@ footer {
 }
 
 .modal-form-area {
-  flex-direction: column;
+  margin-bottom: 4px;
 }
 
 .modal-form-input {
+  margin: 0;
   width: 100%;
   height: 40px;
-
+  border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  border-radius: 4px;
   cursor: pointer;
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus {
+  border: 1px solid #2196f3;
 }
 
 .modal-form-label {
@@ -783,21 +803,26 @@ footer {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 4px;
 }
 
-/* .modal-form-input-coment {
-  width: 448px;
-  height: 120px;
+.modal-form-wrap {
+  position: relative;
+}
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  cursor: pointer;
-} */
+.form-field-comment textarea::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 
-.modal-coment {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-comment {
+  display: block;
   width: 100%;
+  height: 120px;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 12px;
@@ -807,8 +832,14 @@ footer {
   resize: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+
+  /* box-sizing: border-box; */
 }
 
+.modal-comment:hover,
+.modal-comment:focus {
+  border: 1px solid #2196f3;
+}
 /* CHECKBOX */
 
 .checkbox {
@@ -818,13 +849,17 @@ footer {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  cursor: pointer;
 }
 .checkbox-icon {
   display: inline-block;
   background-image: url(../images/icons.svg/no-check.svg);
   min-width: 16px;
   min-height: 15px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  -webkit-appearance: none;
 }
 
 .checkbox-input:checked ~ .checkbox-icon {
@@ -847,6 +882,7 @@ footer {
   letter-spacing: 0.03em;
   color: #2196f3;
   text-decoration-line: underline;
+  cursor: pointer;
 }
 
 /* BOTTON */
